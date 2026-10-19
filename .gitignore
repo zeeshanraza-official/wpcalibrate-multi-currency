@@ -1,0 +1,5 @@
+# Local secrets and development overrides
+ftp-config.json
+*.log
+.DS_Store
+Thumbs.db

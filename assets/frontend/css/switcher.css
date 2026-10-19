@@ -1,0 +1,194 @@
+/**
+ * WPCalibrate Multi-Currency Frontend Styles
+ */
+
+:root {
+	--wpcalibrate-primary: #2563eb;
+	--wpcalibrate-primary-hover: #1d4ed8;
+	--wpcalibrate-bg: #ffffff;
+	--wpcalibrate-border: #d1d5db;
+	--wpcalibrate-text: #1f2937;
+	--wpcalibrate-radius: 6px;
+	--wpcalibrate-focus-ring: 0 0 0 3px rgba(37, 99, 235, 0.25);
+}
+
+.wpcalibrate-currency-switcher-wrapper {
+	display: inline-block;
+	font-family: inherit;
+	box-sizing: border-box;
+	vertical-align: middle;
+	margin: 6px 0;
+}
+
+.wpcalibrate-select-container {
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+}
+
+.wpcalibrate-currency-select {
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	background-color: var(--wpcalibrate-bg);
+	border: 1px solid var(--wpcalibrate-border);
+	border-radius: var(--wpcalibrate-radius);
+	padding: 8px 32px 8px 12px;
+	padding-inline-start: 12px;
+	padding-inline-end: 32px;
+	font-size: 14px;
+	line-height: 1.4;
+	color: var(--wpcalibrate-text);
+	cursor: pointer;
+	min-height: 40px;
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2212%22%20height%3D%2212%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%234b5563%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpolyline%20points%3D%226%209%2012%2015%2018%209%22%3E%3C%2Fpolyline%3E%3C%2Fsvg%3E");
+	background-repeat: no-repeat;
+	background-position: right 10px center;
+	background-size: 12px;
+	transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+[dir="rtl"] .wpcalibrate-currency-select {
+	background-position: left 10px center;
+}
+
+.wpcalibrate-currency-select:hover {
+	border-color: #9ca3af;
+}
+
+.wpcalibrate-currency-select:focus-visible {
+	outline: none;
+	border-color: var(--wpcalibrate-primary);
+	box-shadow: var(--wpcalibrate-focus-ring);
+}
+
+/* Buttons / Inline Pills Layout */
+.wpcalibrate-currency-button-list {
+	display: inline-flex;
+	flex-wrap: wrap;
+	gap: 6px;
+	list-style: none !important;
+	padding: 0 !important;
+	margin: 0 !important;
+}
+
+.wpcalibrate-currency-item {
+	display: inline-block;
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+.wpcalibrate-currency-btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 6px 12px;
+	font-size: 13px;
+	font-weight: 500;
+	color: var(--wpcalibrate-text);
+	background-color: #f3f4f6;
+	border: 1px solid var(--wpcalibrate-border);
+	border-radius: var(--wpcalibrate-radius);
+	text-decoration: none !important;
+	min-height: 36px;
+	transition: all 0.15s ease;
+}
+
+.wpcalibrate-currency-btn:hover {
+	background-color: #e5e7eb;
+	color: #111827;
+}
+
+.wpcalibrate-currency-btn.is-active,
+.wpcalibrate-currency-btn[aria-current="true"] {
+	background-color: var(--wpcalibrate-primary);
+	border-color: var(--wpcalibrate-primary);
+	color: #ffffff !important;
+	font-weight: 600;
+}
+
+.wpcalibrate-currency-btn:focus-visible {
+	outline: none;
+	box-shadow: var(--wpcalibrate-focus-ring);
+}
+
+/* Floating Widget */
+.wpcalibrate-floating-widget {
+	position: fixed;
+	z-index: 99998;
+	background: #ffffff;
+	padding: 8px 12px;
+	border-radius: 30px;
+	box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+	border: 1px solid #e5e7eb;
+	display: flex;
+	align-items: center;
+}
+
+.wpcalibrate-floating-widget .wpcalibrate-currency-switcher-wrapper {
+	margin: 0;
+}
+
+.wpcalibrate-floating-widget .wpcalibrate-currency-select {
+	border: none;
+	background-color: transparent;
+	padding-block: 4px;
+	min-height: 32px;
+}
+
+.wpcalibrate-pos-bottom_right {
+	bottom: 24px;
+	right: 24px;
+}
+
+.wpcalibrate-pos-bottom_left {
+	bottom: 24px;
+	left: 24px;
+}
+
+.wpcalibrate-pos-top_right {
+	top: 24px;
+	right: 24px;
+}
+
+.wpcalibrate-pos-top_left {
+	top: 24px;
+	left: 24px;
+}
+
+/* Placements margin adjustments */
+.wpcalibrate-placement-shop-loop {
+	margin-bottom: 16px;
+}
+
+.wpcalibrate-placement-single-product {
+	margin-bottom: 16px;
+}
+
+.wpcalibrate-placement-cart,
+.wpcalibrate-placement-checkout {
+	margin-bottom: 20px;
+}
+
+/* Accessibility helper */
+.screen-reader-text {
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	-webkit-clip-path: inset(50%);
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+	word-wrap: normal !important;
+}
+
+@media (max-width: 600px) {
+	.wpcalibrate-floating-widget {
+		bottom: 16px;
+		right: 16px;
+		padding: 6px 10px;
+	}
+}
